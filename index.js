@@ -13,7 +13,7 @@ const chequearResultado = () => {
   let numeroIngresado = parseInt(numeroEntrada.value);
   // Usamos el operador OR para validar una operacion o otra
   // Con isNaN (is not a number) podemos preguntar si NO es un number
-  if (numeroIngresado < 1 || numeroIngresado > 10 || isNaN(numeroIngresado)) {
+  if (numeroIngresado < 1 || numeroIngresado > 100 || isNaN(numeroIngresado)) {
     // textContent es un atributo del parrafo para agregar contenido de texto
     mensaje.textContent = "Por favor, introduce un número válido entre 1 y 100";
     // Aplicamos el style de color rojo
