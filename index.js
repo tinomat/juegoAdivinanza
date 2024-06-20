@@ -27,7 +27,7 @@ const chequearResultado = () => {
   } else if (numeroIngresado === numeroRandom) {
     if (intentos === 1) {
       mensaje.textContent = `Sos un capo man lo sacaste a la primera 😎😎`;
-    } else if (intentos > 1 && intentos <= 3) {
+    } else if (intentos > 1 && intentos <= 5) {
       mensaje.textContent = `Re bien lo sacaste en tan solo ${intentos} intentos!!!`;
     } else {
       mensaje.textContent = `Muy bien! Le acertaste al numero en ${intentos} intentos!`;
