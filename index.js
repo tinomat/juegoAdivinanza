@@ -5,10 +5,14 @@ const numeroRandom = Math.floor(Math.random() * 100 + 1);
 let numeroEntrada = document.getElementById("numeroEntrada");
 // Mensaje de advertencia para el usuario
 let mensaje = document.getElementById("mensaje");
+// Iniciamos intentos en 0
+let intentos = 0;
 console.log(numeroRandom);
 
 // Funcion para chequear el resultado
 const chequearResultado = () => {
+  // Aumentamos intentos en 1 para que cada vez que clickeemos se sume
+  intentos++;
   // Le vamos a hacer un parseInt al numeroEntrada para que sea un dato tipo number y pueda ser validado
   let numeroIngresado = parseInt(numeroEntrada.value);
   // Usamos el operador OR para validar una operacion o otra
@@ -21,8 +25,13 @@ const chequearResultado = () => {
     // Usamos return para en caso de que no sea valido el dato ingresado se corte la ejecucion del codigo
     return;
   } else if (numeroIngresado === numeroRandom) {
-    mensaje.textContent =
-      "Felicidades le pegaste al numero, sos un puto chad!!";
+    if (intentos === 1) {
+      mensaje.textContent = `Sos un capo man lo sacaste a la primera 😎😎`;
+    } else if (intentos > 1 && intentos <= 3) {
+      mensaje.textContent = `Re bien lo sacaste en tan solo ${intentos} intentos!!!`;
+    } else {
+      mensaje.textContent = `Muy bien! Le acertaste al numero en ${intentos} intentos!`;
+    }
     mensaje.style.background = "#040";
     mensaje.style.color = "#fff";
     // Hacemos que una vez hayas ganado no se pueda cambiar el numero del input
