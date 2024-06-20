@@ -9,6 +9,7 @@ body {
 }
 h1 {
   color: #333;
+  margin-bottom: 0;
 }
 input {
   padding: 8px;
@@ -33,6 +34,6 @@ button:focus {
   margin-top: 20px;
 }
 p {
-  padding: 0.5rem;
   border-radius: 1rem;
+  padding: 0.3rem;
 }
