@@ -7,8 +7,6 @@ let numeroEntrada = document.getElementById("numeroEntrada");
 let mensaje = document.getElementById("mensaje");
 // Iniciamos intentos en 0
 let intentos = 0;
-console.log(numeroRandom);
-
 // Funcion para chequear el resultado
 const chequearResultado = () => {
   // Aumentamos intentos en 1 para que cada vez que clickeemos se sume
