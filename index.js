@@ -28,7 +28,7 @@ const chequearResultado = () => {
     // Hacemos que una vez hayas ganado no se pueda cambiar el numero del input
     numeroEntrada.disabled = "true";
     return;
-  } else if (numeroIngresado > numeroRandom) {
+  } else if (numeroIngresado < numeroRandom) {
     mensaje.textContent = "¡El numero es más alto! Vuelve a intentar";
   } else {
     mensaje.textContent = "¡El numero es más bajo! Prueba de nuevo";
