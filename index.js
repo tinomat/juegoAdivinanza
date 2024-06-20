@@ -5,6 +5,7 @@ const numeroRandom = Math.floor(Math.random() * 10 + 1);
 let numeroEntrada = document.getElementById("numeroEntrada");
 // Mensaje de advertencia para el usuario
 let mensaje = document.getElementById("mensaje");
+console.log(numeroRandom);
 
 // Funcion para chequear el resultado
 const chequearResultado = () => {
@@ -19,10 +20,6 @@ const chequearResultado = () => {
     mensaje.style.color = "#f00";
     // Usamos return para en caso de que no sea valido el dato ingresado se corte la ejecucion del codigo
     return;
-  } else if (numeroIngresado !== numeroRandom) {
-    mensaje.textContent = "No acertaste, prueba otra vez!";
-    mensaje.style.color = "#f00";
-    return;
   } else if (numeroIngresado === numeroRandom) {
     mensaje.textContent =
       "Felicidades le pegaste al numero, sos un puto chad!!";
@@ -31,6 +28,10 @@ const chequearResultado = () => {
     // Hacemos que una vez hayas ganado no se pueda cambiar el numero del input
     numeroEntrada.disabled = "true";
     return;
+  } else if (numeroIngresado > numeroRandom) {
+    mensaje.textContent = "¡El numero es más alto! Vuelve a intentar";
+  } else {
+    mensaje.textContent = "¡El numero es más bajo! Prueba de nuevo";
   }
 };
 
