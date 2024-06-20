@@ -8,15 +8,20 @@ body {
   min-height: 100dvh;
   gap: 1rem;
   font-family: "poppins";
+  background-color: #102c57;
 }
 h1 {
-  color: #333;
+  color: #eee;
   margin-bottom: 0;
 }
 input {
   padding: 8px;
   font-size: 16px;
   border-radius: 1rem;
+  border: 2px solid #eee;
+}
+input:focus {
+  outline: 2px solid #000;
 }
 button {
   padding: 8px 12px;
@@ -39,4 +44,5 @@ p {
   border-radius: 1rem;
   padding: 0.3rem;
   text-align: center;
+  color: #eee;
 }
