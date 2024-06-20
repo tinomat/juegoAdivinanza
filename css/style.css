@@ -36,4 +36,5 @@ button:focus {
 p {
   border-radius: 1rem;
   padding: 0.3rem;
+  text-align: center;
 }
