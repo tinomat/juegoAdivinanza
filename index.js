@@ -1,6 +1,6 @@
 // Juego de adivinar el numero entre 1 y 10
 // El numero random va a ser el redondeo asi abajo y un numero random del 0 al 100 +1
-const numeroRandom = Math.floor(Math.random() * 10 + 1);
+const numeroRandom = Math.floor(Math.random() * 100 + 1);
 // Numero que ingrese el usuario en el input
 let numeroEntrada = document.getElementById("numeroEntrada");
 // Mensaje de advertencia para el usuario
